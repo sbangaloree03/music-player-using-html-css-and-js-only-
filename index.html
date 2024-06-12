@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body data-theme="light">
+    <header>
+        <h1>Music Player</h1>
+        <button id="toggleTheme">Toggle Theme</button>
+    </header>
+    <div id="container">
+        <div id="all-songs-div">
+            <h2>All Songs</h2>
+            <select id="genreFilter">
+                <option value="all">All</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Hip-Hop">Hip-Hop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Classical">Classical</option>
+                <!-- Add more genres as needed -->
+            </select>
+            <ul id="songList"></ul>
+        </div>
+        <div id="card-div">
+            <h2>Now Playing</h2>
+            <img id="songImage" src="media/sadbuttrue.jpeg" alt="Song Image">
+            <p id="songName">Sad But True</p>
+            <p id="artistName">Metallica</p>
+            <audio id="audioPlayer" controls hidden>
+                Your browser does not support the audio element.
+            </audio>
+            <input type="range" id="progressBar" value="0" max="100">
+            <div class="controls">
+                <i id="prevSong" class="fas fa-backward"></i>
+                <i id="playPauseSong" class="fas fa-play"></i>
+                <i id="nextSong" class="fas fa-forward"></i>
+                <i id="addToPlaylist" class="fas fa-plus"></i>
+            </div>
+        </div>
+        <div id="playlist-div">
+            <h2>Playlists</h2>
+            <input type="text" id="playlistName" placeholder="Enter playlist name">
+            <button id="createPlaylist">Create Playlist</button>
+            <ul id="playlistList"></ul>
+        </div>
+        <div id="playlist-songs-div">
+            <h2>Playlist Songs</h2>
+            <ul id="playlistSongsList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
